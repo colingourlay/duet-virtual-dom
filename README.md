@@ -2,6 +2,12 @@
 
 Use a virtual DOM with [duet](https://github.com/colingourlay/duet) by passing patches from the worker thread to the main thread, and expected DOM events back in.
 
+```
+$ npm install duet-virtual-dom
+```
+
+## Usage
+
 ```javascript
 var duet    = require('duet');
 var channel = require('duet-virtual-dom/channel');
