@@ -1,0 +1,26 @@
+{
+  "name": "duet-virtual-dom",
+  "version": "1.0.0",
+  "description": "Use a virtual DOM with duet by passing patches from the worker thread to the main thread, and DOM events from the main thread to the worker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/colingourlay/duet-virtual-dom.git"
+  },
+  "author": "Colin Gourlay <colin@colin-gourlay.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colingourlay/duet-virtual-dom/issues"
+  },
+  "homepage": "https://github.com/colingourlay/duet-virtual-dom",
+  "dependencies": {
+    "duet-channel": "^1.0.0",
+    "form-data-set": "^2.0.0",
+    "tree-walk": "^0.4.0",
+    "vdom-serialized-patch": "^1.0.6",
+    "virtual-dom": "^2.1.1"
+  }
+}
