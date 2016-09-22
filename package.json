@@ -1,6 +1,6 @@
 {
   "name": "duet-virtual-dom",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Use a virtual DOM with duet by passing patches from the worker thread to the main thread, and DOM events from the main thread to the worker.",
   "main": "index.js",
   "scripts": {
