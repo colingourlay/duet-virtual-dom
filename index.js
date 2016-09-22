@@ -100,18 +100,22 @@ function getPrimitiveProps(obj, atObj) {
 }
 
 function eventListener(key, eventName, event) {
-    var handlerKey, eventData, valueData;
+    var target, handlerKey, eventData, valueData;
 
-    handlerKey = event.target.dataset[eventName];
+    target = event.target;
+
+    while ((handlerKey = target.dataset[eventName]) == null && target !== document.documentElement) {
+        target = target.parentElement;
+    }
 
     if (typeof handlerKey === 'string') {
 
         setTimeout(function () {
             eventData = getPrimitiveProps(event, event.constructor.prototype);
-            eventData.target = getPrimitiveProps(event.target, Element);
-            valueData = getFormData(event.target);
+            eventData.target = getPrimitiveProps(target, Element);
+            valueData = getFormData(target);
 
-            if (!(new RegExp('\\b' + eventName + '\\b')).test(event.target.dataset.preventDefault)) {
+            if (!(new RegExp('\\b' + eventName + '\\b')).test(target.dataset.preventDefault)) {
                 event.preventDefault();
             }
 
